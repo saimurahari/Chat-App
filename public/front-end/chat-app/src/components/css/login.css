@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+:root {
+    --default: #9e3e9f;
+    --black: black;
+    --light-color: #666;
+    --box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    display: flex;
+    border: 1px solid #ccc;
+    margin: 100px;
+    margin-left: 150px;
+    margin-right: 150px;
+    height: 80vh;
+}
+
+.box-container {
+    padding: 50px;
+    display: flex;
+    width: 40%;
+    background-color: #f9f8fb;
+
+}
+
+.login-form {
+    font-weight: bold;
+    text-align: left;
+
+}
+
+.login-form p {
+
+    font-weight: lighter;
+    font-size: 30px;
+}
+
+.login-form p small {
+    font-size: 12px;
+
+}
+
+.login-form label {
+    width: 100px;
+    display: inline-block;
+    margin-bottom: 25px;
+}
+
+
+.login-form input[type="email"],
+input[type="password"],
+input[type='text'] {
+
+    border-radius: 4px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    padding: 5px;
+    width: 200px;
+    margin-left: 100px;
+}
+
+.login-form input:focus {
+    outline: none;
+    border: 1px solid var(--default);
+}
+
+.login-form input[type="submit"] {
+    background-color: var(--default);
+    color: white;
+    border: none;
+    float: right;
+    cursor: pointer;
+    padding: 10px;
+    font-weight: bold;
+    padding-left: 14px;
+    padding-right: 14px;
+    border-radius: 5px;
+
+}
+
+.login-form a {
+    font-size: 14px;
+    float: right;
+    text-decoration: none;
+    color: #59115a;
+}
+
+.login-form hr {
+    color: #ccc;
+}
+
+.login-form .fot {
+    display: flex;
+    justify-content: center;
+    text-align: right;
+    font-weight: normal;
+}
+
+.login-form .fot a {
+    text-align: center;
+    font-weight: bold;
+}
+
+.box-container2 {
+    background-color: #59115a;
+    color: white;
+    border: 2px solid black;
+    width: 60%;
+
+}
+
+.box-container2 img {
+    width: 70%;
+    border-radius: 20px;
+    margin: 70px;
+    filter: blur(1px);
+    -webkit-filter: blur(1px);
+}
+
+.box-container span {
+    font-weight: normal;
+    font-size: 12px;
+
+}

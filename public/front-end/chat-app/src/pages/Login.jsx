@@ -14,11 +14,11 @@ function Login() {
     password: "",
   });
   const toastOptions = {
-    position: "bottom-right",
+    position: "top-right",
     autoClose: 8000,
     pauseOnHover: true,
     draggable: true,
-    theme: "dark",
+    theme: "light",
   };
   const handleSubmit = async (event) => {
     event.preventDefault();

@@ -19,7 +19,7 @@ function Register() {
     autoClose: 8000,
     pauseOnHover: true,
     draggable: true,
-    theme: "dark",
+    theme: "light",
   };
   const handleSubmit = async (event) => {
     event.preventDefault();

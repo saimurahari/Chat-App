@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+:root {
+    --default: #9e3e9f;
+    --black: black;
+    --light-color: #666;
+    --box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+
+}
+
+.home-container{
+    position:absolute;
+    top:0;bottom:0;left:0;right: 0;
+    overflow: hidden;
+    z-index: -1;
+    display: flex;
+    border:2px solid rgb(203, 203, 203);
+    border-radius: 20px;
+    margin:10px;
+
+}
+.home-side{
+
+    width: 15vw;
+    padding: 40px;
+
+}
+.home-chat{
+    width: 85vw;
+}
+.nav-chat {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: var(--default);
+  }
+  
+.person2{
+    float: right;
+  }
+  
+  .person a {
+    font-size: 25px;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  .person2 a {
+    font-size: 25px;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+.person{
+    float:left;
+    color:black;
+  }
+  
+
+.chat-body{
+    padding-top:10px;
+    height: 80vh;
+    display: block;
+    background-image: url('../images/background-chat.jpeg');
+    
+}
+.chat-body .recieve{
+
+    padding: 10px;
+    background-color: white;
+    color: var(--default);
+    border-radius: 10px 10px 10px 0px;
+}
+.chat-body .recieve-div{
+    float:left;
+
+}
+.chat-body .send-div{
+    float:right;
+    width: 60%;
+}
+.chat-body .send{
+    float: right;
+
+    padding: 10px;
+    color:white;
+    background-color: var(--default);
+
+    border-radius: 10px 10px 0px 10px;
+}
+.chat-body .send span{
+    float:right;
+}
+.chat-input{
+    height: 100px;
+    display: flex;
+
+}
+.chat-input form{
+    width: 100%;
+    padding:0;
+}
+.chat-input input[type="text"]{
+    width: 95%;
+    margin-left: 0;
+    height: 40px;
+    padding:20px;
+    border-radius: 80px;
+    
+}
+.chat-input button[type="submit"]{
+    width: 5%;
+    background-color: var(--default);
+    color: white;
+    height: 40px;
+    border:none;
+    border-radius: 100px;
+}
+
+
+/* side contacts chat css */
+.contacts li{
+    padding-top:20px;
+    list-style: none;
+}

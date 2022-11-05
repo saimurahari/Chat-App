@@ -63,10 +63,10 @@ function Login() {
             onSubmit={(event) => handleSubmit(event)}
           >
             <p>
-              <b>Create Account</b>
+              <b>Login</b>
               <br />
               <small>
-                Welcome to SChat Application. Register Now to avail SChat
+                Welcome to ConnectUp Application. Register Now to avail SChat
               </small>
             </p>
             <label>Username:</label>

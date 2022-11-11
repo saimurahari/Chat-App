@@ -4,7 +4,7 @@ import Messages from './Messages';
 import axios from 'axios';
 export default function ChatContainer({currentChat,currentUser}) {
     const handleSendMsg = async(msg)=>{
-
+      alert(msg);
     };
   return (
     <>

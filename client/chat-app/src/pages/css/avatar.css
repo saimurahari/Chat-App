@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+:root {
+    --default: #9e3e9f;
+    --black: black;
+    --light-color: #666;
+    --box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+
+}
+.avatar-container{
+    margin: 200px;
+    border:2px solid rgb(166, 163, 163);
+    border-radius: 30px;
+    padding:30px;
+    justify-content: center;
+    background-color: #f9f8fb;
+}
+.avatar-container .title-container{
+    text-align: center;
+}
+.avatars{
+    display: flex;
+    justify-content: center;
+    gap:2rem;
+}
+.avatar{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    width: 100px;
+    padding:0.4rem;
+    border-radius: 100px;
+}
+.selected{
+    border: 0.4rem solid var(--default);       
+}
+.btn-avatar{
+    display: flex;
+    justify-content: center;
+}
+.submit-btn{
+    padding:10px;
+    background-color: var(--default);
+    border:none;
+    border-radius: 10px;
+    color:white;
+    cursor: pointer;
+}

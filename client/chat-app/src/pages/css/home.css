@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
 :root {
     --default: #9e3e9f;
     --black: black;
@@ -7,123 +8,77 @@
 
 }
 
-.home-container{
-    position:absolute;
-    top:0;bottom:0;left:0;right: 0;
-    overflow: hidden;
-    z-index: -1;
+.home-container {
     display: flex;
-    border:2px solid rgb(203, 203, 203);
+    border: 2px solid rgb(203, 203, 203);
     border-radius: 20px;
-    margin:10px;
+    margin: 20px;
+    height: 90vh;
+    width: 95vw;
+    justify-content: center;
+    gap: 1rem;
+    background-color: #FAF9F6;
+}
+
+.hcontainer {
+    height: 85vh;
+    width: 85vw;
+    background-color: #00000076;
+    display: grid;
+    grid-template-columns: 25% 75%;
 
 }
-.home-side{
 
+.home-side {
     width: 15vw;
     padding: 40px;
+    border-right: 3px solid rgb(203, 203, 203);
+}
 
-}
-.home-chat{
+.home-chat {
     width: 85vw;
+    margin-left: -15px;
 }
+
 .nav-chat {
-    list-style-type: none;
     margin: 0;
     padding: 0;
+    height: 90px;
     overflow: hidden;
     background-color: var(--default);
-  }
-  
-.person2{
-    float: right;
-  }
-  
-  .person a {
-    font-size: 25px;
-    display: inline-block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  .person2 a {
-    font-size: 25px;
-    display: inline-block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-.person{
-    float:left;
-    color:black;
-  }
-  
-
-.chat-body{
-    padding-top:10px;
-    height: 80vh;
-    display: block;
-    background-image: url('../images/background-chat.jpeg');
-    
-}
-.chat-body .recieve{
-
-    padding: 10px;
-    background-color: white;
-    color: var(--default);
-    border-radius: 10px 10px 10px 0px;
-}
-.chat-body .recieve-div{
-    float:left;
+    border-radius: 20px;
 
 }
-.chat-body .send-div{
-    float:right;
-    width: 60%;
-}
-.chat-body .send{
-    float: right;
 
-    padding: 10px;
-    color:white;
-    background-color: var(--default);
 
-    border-radius: 10px 10px 0px 10px;
-}
-.chat-body .send span{
-    float:right;
-}
-.chat-input{
-    height: 100px;
+.current-user {
+    float: left;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.1rem;
+    color: white;
 
 }
-.chat-input form{
-    width: 100%;
-    padding:0;
+.current-user .avatar img {
+    height: 4rem;
 }
-.chat-input input[type="text"]{
-    width: 95%;
-    margin-left: 0;
-    height: 40px;
-    padding:20px;
-    border-radius: 80px;
+
+.current-user .username {
+    font-size: 18px;
+    text-transform: uppercase;
+}
+.icons{
+    float:right;
+    font-size: 40px;
+    margin: 10px;
+    padding: 10px;
     
 }
-.chat-input button[type="submit"]{
-    width: 5%;
-    background-color: var(--default);
-    color: white;
-    height: 40px;
-    border:none;
-    border-radius: 100px;
+.icons .phone{
+    color:white;
+    margin-right: 20px;
 }
-
-
-/* side contacts chat css */
-.contacts li{
-    padding-top:20px;
-    list-style: none;
+.icons .info{
+    color:white;
 }

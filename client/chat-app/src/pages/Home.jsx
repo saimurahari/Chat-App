@@ -1,62 +1,81 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
 import "./css/home.css";
+import Robot from '../pages/images/robot.gif';
+import axios from 'axios';
+import { useNavigate } from "react-router-dom";
+import { allUsersRoute } from "../utils/APIRoutes";
+import Contacts from '../components/Contacts';
 import { FiPhoneCall } from "react-icons/fi";
 import {AiOutlineSend} from 'react-icons/ai';
 import {BsFillInfoCircleFill} from 'react-icons/bs';
-
+import Welcome from '../components/welcome';
+import ChatContainer from "../components/ChatContainer";
 export default function Home() {
+  const navigate = useNavigate();
+ const [contacts,setContacts] = useState([]);
+ const [currentUser, setCurrentUser] = useState(undefined);
+ const [currentUserName, setCurrentUserName] = useState(undefined);
+ const [currentUserImage, setCurrentUserImage] = useState(undefined);
+ const [currentChat, setCurrentChat] = useState(undefined);
+ useEffect(() => {
+  if (currentUser) {
+    setCurrentUserImage(currentUser.avatarImage);
+    setCurrentUserName(currentUser.username);
+  }
+}, [currentUser]);
+ useEffect(()=>{
+   async function fetchData(){
+     if(!localStorage.getItem('chat-app-user')){
+       navigate('/login');
+     }else{
+       setCurrentUser(await JSON.parse(localStorage.getItem('chat-app-user')))
+     }
+   }
+   fetchData();
+ },[]);
+ 
+ useEffect(()=>{
+   async function fetch(){
+     if (currentUser){
+       if(currentUser.isAvatarImageSet){
+         const data = await axios.get(`${allUsersRoute}/${currentUser._id}`);
+         setContacts(data.data);
+ 
+       }else{
+         navigate('/setAvatar');
+ 
+       }
+     }
+ 
+   }
+   fetch();
+ },[currentUser]);
+ 
+ const handleChatChange = (chat)=>{
+  setCurrentChat(chat);
+ };
+
+
   return (
+    <>
     <div className="home-container">
       <div className="home-side">
-        <h2>SChat</h2>
-        <hr />
-        <div className="contacts">
-          <ul>
-            <li>Sai Murahari</li>
-            <li>Murahari</li>
-            <li>Sunil</li>
-            <li>Kishore</li>
-          </ul>
-        </div>
+      <Contacts contacts = {contacts} currentUser={currentUser} changeChat = {handleChatChange} />
       </div>
-      <div className="home-chat">
-        <div className="chatting">
-          <ul className="nav-chat">
-            <li className="person2">
-              <a href="#home"><FiPhoneCall /></a>
-              <a href="#info"><BsFillInfoCircleFill /></a>
-            </li>
-            <li className="person">
-              <a href="#person">Sai</a>
-            </li>
-          </ul>
+       <div className="home-chat">
+       {currentChat === undefined ? (
+        <div className='wel-cont'>
+        <img src={Robot} alt="Robot" />
+        <h1>Welcome, <span>{currentUserName}</span></h1>
         </div>
-        <div className="chat-body">
-          <div className="recieve-div">
-          <div className="recieve">
-            <span>Hii Murahari!</span>
-          </div>
-          </div>
-          <br />
-          <br />
-          <div className="send-div">
-          <div className="send">
-            <span>How are you sai?</span>
-          </div>
-          </div>
-          
-          
-          
-        </div>
-        <div className="chat-input">
-          <form>
-            <input type="text"></input>
-            <button type="submit">
-            <AiOutlineSend />
-            </button>
-          </form>
-        </div>
-      </div>
+       ): (
+        <ChatContainer currentChat={currentChat} currentUser = {currentUser}/>
+       )}
+
+      </div>  
+
     </div>
+
+    </>
   );
 }

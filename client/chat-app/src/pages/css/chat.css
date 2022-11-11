@@ -1,0 +1,42 @@
+h3{
+    text-transform: uppercase;
+}
+.contacts{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+    gap:0.8rem;
+}
+.contact{
+    background-color: #E2DFD2;
+    min-height: 5rem;
+    width: 90%;
+    cursor: pointer;
+    border-radius: 0.2rem;
+    padding:0.4rem;
+    gap:1rem;
+    align-items: center;
+    display: flex;
+    
+}
+.avatar1 img{
+    height: 3rem;
+}
+.selected{
+    background-color: #8685f0;
+}
+.wel-cont{
+    margin-top:100px;
+    text-align: center;
+}
+.wel-cont img{
+    height: 250px;
+}
+.welcome{
+    text-align: center;
+}
+.welcome span{
+    text-transform: uppercase;
+    color:#8685f0;
+}

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import '../pages/css/chat.css';
+import "../pages/css/chat.css";
 
 export default function Contacts({ contacts, currentUser, changeChat }) {
   const [currentUserName, setCurrentUserName] = useState(undefined);
@@ -21,9 +21,9 @@ export default function Contacts({ contacts, currentUser, changeChat }) {
     <>
       {currentUserImage && currentUserName && (
         <div className="cont">
-        <div className="logo">
+          <div className="logo">
             <h3>SChat App</h3>
-        </div>
+          </div>
           <div className="contacts">
             {contacts.map((contact, index) => {
               return (
@@ -32,7 +32,7 @@ export default function Contacts({ contacts, currentUser, changeChat }) {
                     index === currentSelected ? "selected" : ""
                   }`}
                   key={index}
-                  onClick={()=>changeCurrentChat(index,contact)}
+                  onClick={() => changeCurrentChat(index, contact)}
                 >
                   <div className="avatar1">
                     <img
@@ -47,10 +47,8 @@ export default function Contacts({ contacts, currentUser, changeChat }) {
               );
             })}
           </div>
-          
         </div>
       )}
-
     </>
   );
 }

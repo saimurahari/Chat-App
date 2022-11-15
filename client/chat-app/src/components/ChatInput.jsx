@@ -1,5 +1,6 @@
 import React,{useState} from 'react'
 import {IoMdSend} from 'react-icons/io';
+import '../pages/css/chatInput.css';
 
 export default function ChatInput({handleSendMsg}) {
     const [msg,setMsg] = useState("");
@@ -20,7 +21,7 @@ export default function ChatInput({handleSendMsg}) {
         value={msg}
         onChange={(e)=> setMsg(e.target.value)}
          />
-        <input type='submit'></input>
+        <button type='submit'><IoMdSend /></button>
     </form>
     </div>
     </>

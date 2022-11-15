@@ -94,7 +94,7 @@ function Login() {
             <span> {"\u00A0"}I've read and accept the Terms & Conditions</span>
             <br />
             <br />
-            <input type="submit" value="create my account" />
+            <input type="submit" value="Login" />
           </form>
 
           <span>

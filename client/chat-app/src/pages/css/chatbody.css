@@ -1,0 +1,81 @@
+:root {
+    --default: #9e3e9f;
+    --black: black;
+    --light-color: #666;
+    --box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+
+}
+.d{
+    display: grid;
+    overflow: hidden;
+}
+.chat-cont{
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.chat-cont .user-details{
+    height: 580px;
+    overflow: scroll;
+    width: 100%;
+}
+.chat-cont .user-details .avatar{
+    display: flex;
+}
+.chat-cont .user-details .avatar img{
+    height: 3rem;
+}
+.chat-cont .user-details .username h3{
+    color:black;
+}
+.chat-cont .user-details .av-us{
+    background-color: rgb(255, 255, 255);
+    border-bottom: 2px solid grey;
+    border-radius: 5px;
+    height: 4rem;
+    display: flex;
+    position: fixed;
+    margin-top: 10px;
+    width: 75%;
+}
+.av-us .con{
+    display: flex;
+    margin-left: 70%;
+}
+.av-us .con h3{
+    margin: 10px;
+    font-size: 28px;
+    cursor: pointer;
+}
+.chat-messages{
+    padding: 6rem 2rem;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    gap:1rem;
+}
+.chat-messages .message{
+    display: flex;
+    align-items: center;
+}
+.chat-messages .message .content{
+    max-width: 40%;
+    min-width: 10%;
+    overflow-wrap: break-word ;
+    height: 100%;
+    padding:10px;
+    font-size: 100%;
+    text-transform: capitalize;
+    border-radius: 1rem;
+}
+.chat-messages .sended{
+    justify-content: flex-end;
+    
+} 
+.chat-messages .sended .content{
+    background-color: #408eec;
+    color:white;
+}
+.chat-messages .recieved .content{
+    background-color: #796c9921;
+}

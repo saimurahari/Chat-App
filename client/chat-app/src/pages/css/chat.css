@@ -23,12 +23,16 @@ h3{
 .avatar1 img{
     height: 3rem;
 }
-.selected{
-    background-color: #8685f0;
+.contacts .selected{
+    background-color: #408eec;
 }
 .wel-cont{
     margin-top:100px;
     text-align: center;
+}
+.logo{
+    border-bottom: 2px solid #757576;
+    margin-bottom: 10px;
 }
 .wel-cont img{
     height: 250px;

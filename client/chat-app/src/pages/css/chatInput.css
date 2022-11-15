@@ -1,0 +1,26 @@
+:root {
+    --default: #9e3e9f;
+    --black: black;
+    --light-color: #666;
+    --box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+
+}
+.input-cont{
+    width: 100%;
+}
+.input-cont input[type=text]{
+    margin-left: 0px;
+    width: 95%;
+    padding: 15px;
+}
+.input-cont button[type=submit]{
+    cursor: pointer;
+    padding: 12px;
+    background-color: #408eec;
+    border:none;
+    border-radius: 5px;
+    margin-top:4px;
+    margin-left: 5px;
+    color:white;
+    font-size: 20px;
+}
